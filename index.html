@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI French Poem Generator</title>
   </head>
@@ -14,18 +15,22 @@
       </header>
 
       <main>
-        <form id="poem-generator-form">
-          <input
-            type="text"
-            placeholder="Enter the topic of the French poem"
-            autofocus
-            required
-            autocomplete="off"
-            class="instructions"
-          />
-          <input type="submit" class="submit-button" />
-        </form>
-        <div class="poem" id="poem"></div>
+        <div class="form-container">
+          <form id="poem-generator-form">
+            <input
+              type="text"
+              placeholder="Enter the topic of a French poem"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">i.e: Flower, Paris or Cheese</div>
+        </div>
+        <div class="poem hidden" id="poem"></div>
       </main>
 
 
@@ -42,7 +47,7 @@
         open-sourced on GitHub</a
       >
       and is
-      <a href="h" target="_blank">hosted on Netlify</a>.
+      <a href="https://gabipoem-generator.netlify.app" target="_blank">hosted on Netlify</a>.
     </footer>
 
     <script src="src/index.js"></script>
